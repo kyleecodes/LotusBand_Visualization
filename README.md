@@ -5,7 +5,9 @@ Visualize the differences between your favorite artists albums through time. How
 
 Featuring the popular data engineering libraries pandas, matplotlib, and seaborn libraries.
 
-###TODO
-[ ] connect to flask / make frontend
-[ ] create classes 
-[ ] refactor
+### TODO
+- [ ] connect to flask / make frontend
+
+- [ ] create classes 
+
+- [ ] refactor
