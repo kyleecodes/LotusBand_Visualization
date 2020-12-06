@@ -38,11 +38,11 @@ headers = {
 # GET REQUEST
 BASE_URL = 'https://api.spotify.com/v1/'
 
-track_id = '6y0igZArWVi6Iz0rj35c1Y'
-
-r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
-
-r = r.json()
+# track_id = '6y0igZArWVi6Iz0rj35c1Y'
+#
+# r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
+#
+# r = r.json()
 
 # PRINT TO SEE THE TRACK INFO
 # print(r)

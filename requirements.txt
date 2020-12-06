@@ -4,3 +4,4 @@ spotipy
 pandas
 matplotlib
 seaborn
+flask
