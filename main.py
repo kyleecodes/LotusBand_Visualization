@@ -7,7 +7,7 @@ from secrets import client_id, client_secret
 
 
 # AUTHORIZATION
-auth = oauth2.SpotifyClientCredentials(
+AUTH = oauth2.SpotifyClientCredentials(
     client_id=client_id,
     client_secret=client_secret
 )
@@ -16,7 +16,7 @@ AUTH_URL = 'https://accounts.spotify.com/api/token'
 
 
 # POST REQUEST
-auth_response = requests.post(AUTH_URL, {
+AUTH_RESPONSE = requests.post(AUTH_URL, {
     'grant_type': 'client_credentials',
     'client_id': client_id,
     'client_secret': client_secret,
@@ -24,14 +24,14 @@ auth_response = requests.post(AUTH_URL, {
 
 
 # CONVERT RESPONSE TO JSON
-auth_response_data = auth_response.json()
+AUTH_RESPONSE_DATA = AUTH_RESPONSE.json()
 
 
 # SAVE ACCESS TOKEN
-access_token = auth_response_data['access_token']
+ACCESS_TOKEN = AUTH_RESPONSE_DATA['access_token']
 
-headers = {
-    'Authorization': 'Bearer {token}'.format(token=access_token)
+HEADERS = {
+    'Authorization': 'Bearer {token}'.format(token=ACCESS_TOKEN)
 }
 
 
@@ -50,7 +50,7 @@ BASE_URL = 'https://api.spotify.com/v1/'
 artist_id = "1a4N2lwra7WGjwCDJS1Dkk"
 
 r = requests.get(BASE_URL + 'artists/' + artist_id + '/albums',
-                 headers=headers,
+                 headers=HEADERS,
                  params={'include_groups': 'album', 'limit': 50})
 d = r.json()
 
@@ -65,13 +65,13 @@ for album in d['items']:
 
     # GET TRACKS FROM ALBUM
     r = requests.get(BASE_URL + 'albums/' + album['id'] + '/tracks',
-                     headers=headers)
+                     headers=HEADERS)
     tracks = r.json()['items']
 
     for track in tracks:
         # GET AUDIO FEATURES (KEY, DANCEABILITY, ETC.)
         f = requests.get(BASE_URL + 'audio-features/' + track['id'],
-                         headers=headers)
+                         headers=HEADERS)
         f = f.json()
 
         # COLLECT ALL ALBUM INFO
