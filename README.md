@@ -5,7 +5,9 @@ Visualize the differences between your favorite artists albums through time. How
 
 Featuring the popular data engineering libraries pandas, matplotlib, and seaborn libraries.
 
+Written in various methods (main file, functions, and classes.)
+
 ### TODO
 - [ ] documentation
 
-- [ ] refactor
+- [ ] refactor!
