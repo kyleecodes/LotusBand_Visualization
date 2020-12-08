@@ -15,4 +15,8 @@ After cloning this repo, you will need the following variables after registering
 - `client_id`
 - `client_secret`
 
+Place these variables in a `secrets.py` file and place these in your .gitignore.
+
 Next, find an artist you would like to perform data analysis on. You can obtain it's artist_id by going to the artist's Spotify page, ckicking "share" and copying the Spotify URI.
+
+
