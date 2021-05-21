@@ -8,8 +8,9 @@ Featuring the popular data engineering libraries pandas, matplotlib, and seaborn
 Written in various methods (onefile, functions, and classes) simply for learning. 
 
 ## Try it yourself
-*If trying this for yourself, understand that onefile.py, functions.py, and classes.py are all the same file, just using different methods. 
-I would recommend using the classes file as it is the most reusuable.*
+*If trying this for yourself, understand that functions.py and classes.py are all the same program, just using different methods. 
+
+First, install dependencies via pip `pip install -r requirements.txt`
 
 After cloning this repo, you will need the following variables after registering your app with a Spotify Developer account to gain access to the Spotify API:
 - `client_id`
